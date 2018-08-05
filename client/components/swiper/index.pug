@@ -1,0 +1,8 @@
+view.swiper-container
+  swiper.swiper(autoplay='true', interval='5000', duration='500', current='{{swiperCurrent}}', bindchange='swiperChange')
+    block(wx:for='{{slider}}', wx:key='unique')
+      swiper-item
+        image.img(src='{{item}}')
+  view.dots
+    block(wx:for='{{slider}}', wx:key='unique')
+      view(class="dot {{index == swiperCurrent ? ' active' : ''}}")

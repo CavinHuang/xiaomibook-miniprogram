@@ -1,0 +1,299 @@
+@import '../../styles/color.styl'
+@import '../../styles/img.styl'
+
+.page-container
+  min-height 100vh
+
+/** index header **/
+.header
+  height 44px
+  line-height 44px
+  background-color $header-background-color
+  padding 0 90px
+  font-size 14px
+  position relative
+  .header-list
+    overflow visible
+    position relative
+    z-index 1
+    display flex
+    .header-item
+      flex 1
+      text-align center
+    .header-bottom-line
+      position absolute
+      bottom -1px
+      width 50%
+      height 2px
+      .line
+        width 40%
+        height 2px
+        margin 0 auto
+        background-color #777
+    .active
+      color $header-active-color
+  .left-signed
+    position absolute
+    left 0
+    top 0
+    width 44px
+    height 44px
+    background url($header_signed) center center no-repeat
+    background-size 22px
+  .right-user
+    position absolute
+    right 0
+    top 0
+    width 44px
+    height 44px
+    background url($header_user) center center no-repeat
+    background-size 16px
+.content-container
+  background #ffffff
+  .top-home
+    background #fff
+    border-bottom 10px solid #f5f5f5
+  .search-block
+    height 34px
+    padding 1px 0 0 30px
+    font 11px/33px a
+    color rgba(0, 0, 0, 0.4)
+    background url($home_search) no-repeat 8px center
+    background-size 14px
+    border 1px solid #f5f5f5
+    border-radius 2px
+    margin 10px 13px
+
+.top-home__btns
+  margin 14px 0 4px
+  display -webkit-box
+  width 100%
+  .top-home__btn
+    line-height 2.4
+    font-size 12px
+    text-align center
+    -webkit-box-flex 1
+    .top-home__icon 
+      display block
+      margin 0 auto
+      height 22px
+      width 22px
+      background-position center
+      background-repeat no-repeat
+      background-size 22px
+      vertical-align -5px
+.main-card 
+  border-bottom 10px solid #f5f5f5
+  background #fff
+.channel-group
+  position relative
+
+.Lazy_waiting image, .Lazy_loading image {
+  opacity: 0;
+  -webkit-transition: opacity .4s;
+}
+.Lazy_loaded image {
+  opacity: 1;
+}
+
+/***** 重磅推荐 ********/
+.channel-h5
+  position relative
+  border-bottom 10px solid #f5f5f5
+  background #fff
+.tab
+  position absolute
+  top 9px
+  right 13px
+  .tab-item
+    position relative
+    padding 16px 7px
+    font 12px/12px a
+    color #999
+  .tab__on
+    color #528ae8 !important
+.tab__bd
+  overflow hidden
+  .tab__wrap
+    float left
+    position relative
+    width 100%
+    margin-right -100%
+    z-index 1
+.Fade 
+  overflow: hidden
+  .list-item
+    float left
+    position relative
+    width 100%
+    margin-right -100%
+    visibility hidden
+    z-index 1
+    -webkit-transition opacity 400ms ease-in-out
+
+.list-h5, .list-more__wrap 
+  padding 0 13px
+  .list-h5-item
+    padding 17px 0
+    border-bottom 1px solid #f0f0f0
+    &:last-child
+      border none
+.book-h5 
+  overflow hidden
+  .book-h5__cover 
+    float left
+    position relative
+    width 85px
+    height 113px
+    background-color #eeece9
+    border 1px solid #f0f0f0
+    border-radius 1px
+    overflow hidden
+    .img
+      width 100%
+      height 100%
+      border-radius 1px
+  .book-h5__finish 
+    position absolute
+    bottom 0
+    width 100%
+    box-sizing border-box
+    font 10px/10px a
+    padding 25px 7px 6px
+    color #fff
+    background -webkit-linear-gradient(top,rgba(0,0,0,0),rgba(0,0,0,0.3))
+  .book-h5__order 
+    position absolute
+    left 3px
+    top 0
+    padding 5px 3px 0 4px
+    height 17px
+    width 12px
+    font 8px/0.8em a
+    color #fff
+    background url($book_cover) no-repeat
+    background-size 12px 17px
+  .book-h5__info
+    margin-left 100px
+    padding-top 6px
+    background #fff
+    .book-h5__title 
+      margin-bottom 4px
+      font 16px/17px a
+      color rgba(0, 0, 0, 0.9)
+      overflow hidden
+      text-overflow ellipsis
+      white-space nowrap
+    .book-h5__author 
+      margin-top 8px
+      font 12px/12px a
+      color rgba(0, 0, 0, 0.7)
+      overflow hidden
+      text-overflow ellipsis
+      white-space nowrap
+    .book-h5__summary
+      display -webkit-box
+      margin 8px 0 0
+      height 2.8em
+      font 12px/1.4em a
+      color rgba(0, 0, 0, 0.6)
+      overflow hidden
+      text-overflow ellipsis
+      -webkit-line-clamp 2
+      -webkit-box-orient vertical
+    .book-h5__wrap 
+      margin-top 10px
+      padding-top 3px
+      overflow hidden
+      .book-h5__tag
+        float left
+        margin -3px 7px 0 0
+        padding 3px 6px 2px
+        max-width 6em
+        font 10px/11px a
+        color #53ac7d
+        border-radius 3px
+        border 1px solid #53ac7d
+        overflow hidden
+        text-overflow ellipsis
+        white-space nowrap
+  .book-h5_no-img__order
+    float left
+    margin-top 1px
+    font 13px/13px a
+    color rgba(237, 83, 15, 0.9)
+  .book-h5_no-img__info 
+    margin-left 27px
+  .book-h5_no-img__title
+    position relative
+    font 15px/15px a
+    color rgba(0, 0, 0, 0.9)
+    background #fff
+  .book-h5_no-img__author 
+    position absolute
+    margin 1px 0 0 13px
+    font 12px/12px a
+    color rgba(0, 0, 0, 0.4)
+    background #fff
+
+.u-tagRT, .u-tagLT, .u-subscript 
+  position absolute
+  top 0
+  left 0
+  line-height 1.4
+  background-color #ef6c2c
+  color #fff
+  width 100%
+  -webkit-transform-origin top center
+  -webkit-transform translateX(50%) rotate(45deg) translateY(50%) scale(0.8)
+  font-size 1.4rem
+  text-align center
+.channel-h5__footer_next 
+  border-top 1px solid #f0f0f0
+  overflow hidden
+  .btn_h5__item
+    float left
+    width 50%
+    padding 14px
+    font 13px/1.3em a
+    color rgba(0, 0, 0, 0.9)
+    box-sizing border-box
+    text-align center
+    &:first-child 
+      border-right 1px solid #f0f0f0
+.channel-group__footer 
+  display block
+  border-top 1px solid #f0f0f0
+  text-align center
+  font-size 14px
+  padding 10px 0
+.channel-h5__footer
+    display block
+    padding 14px 0
+    font 13px/1.3em a
+    border-top 1px solid #f0f0f0
+    text-align center
+.banner-h5__list 
+  padding 13px 13px 0px
+  .banner-h5__list_wrap
+    margin 0 -3px -3px
+    overflow hidden
+  .banner-h5__item
+    float left
+    width 50%
+    margin-bottom 16px
+    padding 0 3px
+    box-sizing border-box
+.banner-h5__cover 
+  position relative
+  padding-bottom 60.6%
+  border 1px solid #f0f0f0
+  border-radius 1px
+  .cover
+    position absolute
+    height 100%
+    width 100%
+    border-radius 1px
+
+
+

@@ -1,0 +1,175 @@
+<!-- index.page -->
+
+//- header
+view.page-container
+  view.header
+    view.header-list
+      text.header-item.active 书城
+      text.header-item 书架
+      view.header-bottom-line
+        view.line
+    view.left-signed
+    view.right-user
+  view.content-container
+    view.top-home
+      view.search-block 输入书名/作者/关键字
+      v-swiper(slider="{{slider}}")
+      view.top-home__btns
+        block(wx:for="{{homeBtns}}", wx:key='unique')
+          view.top-home__btn
+            image.top-home__icon(src="{{item.img}}")
+            text.top-home__des {{item.title}}
+    
+    view.channel-group.main-card
+      v-title(title="本周最火")
+      book-table(listData="{{pageData.items[1].data.data}}")
+    //- 重磅推荐
+    view.channel-h5.channel-h5_tab
+      v-h-title(title="重磅推荐", subtitle="推")
+        view.tab
+          text.tab-item.tab__on 男
+          text.tab-item 女
+      view.tab__bd
+        view.tab__wrap
+          view.Fade.list-h5__wrap
+            view.list-item(style="visibility: visible;")
+                view.list-h5
+                  block(wx:for="{{pageData.items[2].data.data}}", wx:key='unique', wx:if!="{{index < 5}}")
+                    view.list-h5-item
+                      view.book-h5(wx:if="{{index == 0}}")
+                        view.book-h5__cover.Lazy_loading.Lazy_loaded
+                          image.img(src="{{item.cover}}", alt="{{item.title}}")
+                          view.u-tagRT
+                          view.book-h5__finish {{item.finish ? '完结' : '连载'}}
+                          view.book-h5__order {{index + 1}}
+                        view.book-h5__info
+                          text.book-h5__title {{item.title}}
+                          view.book-h5__author
+                            text.author {{item.authors}}
+                          text.book-h5__summary {{item.summary}}
+                          view.book-h5__wrap
+                            block(wx:for="{{item.tags}}", wx:for-item="tag", wx:key='unique')
+                              text.book-h5__tag {{tag}}
+                      view.book-h5.book-h5_no-img(wx:if="{{index != 0}}")
+                        text.book-h5_no-img__order {{index >= 10 ? (index + 1) : '0' + (index + 1)}}
+                        view.book-h5_no-img__info
+                          view.book-h5_no-img__title
+                            | {{item.title}}
+                            view.book-h5_no-img__author
+                              text.author {{item.authors}}
+            view.list-item(style="visibility: hidden;")
+                view.list-h5
+                  block(wx:for="{{pageData.items[2].data.data}}", wx:key='unique', wx:if!="{{index >= 5 && index < 10}}")
+                    view.list-h5-item
+                      view.book-h5(wx:if="{{index == 5}}")
+                        view.book-h5__cover.Lazy_loading.Lazy_loaded
+                          image.img(src="{{item.cover}}", alt="{{item.title}}")
+                          view.u-tagRT
+                          view.book-h5__finish {{item.finish ? '完结' : '连载'}}
+                          view.book-h5__order {{index - 5 + 1}}
+                        view.book-h5__info
+                          text.book-h5__title {{item.title}}
+                          view.book-h5__author
+                            text.author {{item.authors}}
+                          text.book-h5__summary {{item.summary}}
+                          view.book-h5__wrap
+                            block(wx:for="{{item.tags}}", wx:for-item="tag", wx:key='unique')
+                              text.book-h5__tag {{tag}}
+                      view.book-h5.book-h5_no-img(wx:if="{{index != 5}}")
+                        text.book-h5_no-img__order {{(index - 5) >= 10 ? (index - 5 + 1) : '0' + (index - 5 + 1)}}
+                        view.book-h5_no-img__info
+                          view.book-h5_no-img__title
+                            | {{item.title}}
+                            view.book-h5_no-img__author
+                              text.author {{item.authors}}
+            view.list-item(style="visibility: hidden;")
+              view.list-h5
+                block(wx:for="{{pageData.items[2].data.data}}", wx:key='unique', wx:if!="{{index >= 10 && index < 15}}")
+                  view.list-h5-item
+                    view.book-h5(wx:if="{{index == 10}}")
+                      view.book-h5__cover.Lazy_loading.Lazy_loaded
+                        image.img(src="{{item.cover}}", alt="{{item.title}}")
+                        view.u-tagRT
+                        view.book-h5__finish {{item.finish ? '完结' : '连载'}}
+                        view.book-h5__order {{index - 10 + 1}}
+                      view.book-h5__info
+                        text.book-h5__title {{item.title}}
+                        view.book-h5__author
+                          text.author {{item.authors}}
+                        text.book-h5__summary {{item.summary}}
+                        view.book-h5__wrap
+                          block(wx:for="{{item.tags}}", wx:for-item="tag", wx:key='unique')
+                            text.book-h5__tag {{tag}}
+                    view.book-h5.book-h5_no-img(wx:if="{{index != 10}}")
+                      text.book-h5_no-img__order {{index - 10 >= 10 ? (index - 10 + 1) : '0' + (index - 10 + 1)}}
+                      view.book-h5_no-img__info
+                        view.book-h5_no-img__title
+                          | {{item.title}}
+                          view.book-h5_no-img__author
+                            text.author {{item.authors}}
+          view.channel-h5__footer_next
+            text.btn_h5__item.btn-h5__next 换一换
+            text.btn_h5__item.btn-h5__more 查看全部
+    //- 女生
+    view.channel-h5.channel-h5_next
+      v-h-title(title="女生最爱")
+      view.Fade.list-h5__wrap             
+        view.list-h5
+          block(wx:for="{{pageData.items[3].data.data}}", wx:key='unique', wx:if!="{{index < 5}}")
+             view.list-h5-item
+                view.book-h5
+                  view.book-h5__cover.Lazy_loading.Lazy_loaded
+                    image.img(src="{{item.cover}}", alt="{{item.title}}")
+                    view.u-tagRT
+                    view.book-h5__finish {{item.finish ? '完结' : '连载'}}
+                    view.book-h5__order {{index + 1}}
+                  view.book-h5__info
+                    text.book-h5__title {{item.title}}
+                    view.book-h5__author
+                      text.author {{item.authors}}
+                    text.book-h5__summary {{item.summary}}
+                    view.book-h5__wrap
+                      block(wx:for="{{item.tags}}", wx:for-item="tag", wx:key='unique')
+                        text.book-h5__tag {{tag}}
+        view.channel-h5__footer_next
+            text.btn_h5__item.btn-h5__next 换一换
+            text.btn_h5__item.btn-h5__more 查看全部
+    //- 男生
+    view.channel-h5.channel-h5_next
+      v-h-title(title="男生最爱")
+      view.Fade.list-h5__wrap             
+        view.list-h5
+          block(wx:for="{{pageData.items[4].data.data}}", wx:key='unique', wx:if!="{{index < 5}}")
+             view.list-h5-item
+                view.book-h5
+                  view.book-h5__cover.Lazy_loading.Lazy_loaded
+                    image.img(src="{{item.cover}}", alt="{{item.title}}")
+                    view.u-tagRT
+                    view.book-h5__finish {{item.finish ? '完结' : '连载'}}
+                    view.book-h5__order {{index + 1}}
+                  view.book-h5__info
+                    text.book-h5__title {{item.title}}
+                    view.book-h5__author
+                      text.author {{item.authors}}
+                    text.book-h5__summary {{item.summary}}
+                    view.book-h5__wrap
+                      block(wx:for="{{item.tags}}", wx:for-item="tag", wx:key='unique')
+                        text.book-h5__tag {{tag}}
+        view.channel-h5__footer_next
+            text.btn_h5__item.btn-h5__next 换一换
+            text.btn_h5__item.btn-h5__more 查看全部
+    //- 限时免费
+    view.channel-group.main-card
+      v-title(title="限时免费")
+      book-table(listData="{{pageData.items[5].data.data}}")
+      view.channel-group__footer 更多限免佳作>>
+    //- 精选专题
+    view.banner-h5
+      v-h-title(title="精选专题", subtitle="精")
+      view.banner-h5__list
+        view.banner-h5__list_wrap
+          block(wx:for="{{pageData.items[6].data.data}}", wx:key='unique', wx:if!="{{index < 2}}")
+            view.banner-h5__item
+              view.banner-h5__cover
+                image.cover(src="{{item.ad_pic_url}}")
+      view.channel-h5__footer 更多精彩专题>>

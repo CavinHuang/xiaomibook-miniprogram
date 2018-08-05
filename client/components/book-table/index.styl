@@ -1,0 +1,52 @@
+.book-table 
+  padding 13px 14px 5px
+  font-size 0
+  .book-table-item
+    width 33.3%
+    display inline-block
+    vertical-align top
+    line-height 1
+    margin-bottom 8px
+    &:nth-child(3n+1)
+      text-align: left
+  .u-book 
+    position relative
+    overflow hidden
+  .u-book.-vertical 
+    width 86px
+    display inline-block
+  .book-cover 
+    position relative
+    width 8.5rem
+    height 11.3rem
+    background-color #eeece9
+    box-shadow 0px 6px 5px -3px #aaa
+    border 1px solid #f0f0f0
+    border-bottom none
+    overflow hidden
+    .img
+      width 100%
+      height 100%
+      opacity 1
+  .u-book.-vertical
+    .info
+      margin-left 0
+      padding-top 8px
+    .title
+      font-size 13px
+      line-height 1.4em
+      max-height 2.8em
+      overflow hidden
+      color #8d8d8d
+      margin-bottom 0px
+      font-weight 400
+      text-align left
+.u-book .book-cover {
+    float: left;
+    margin-right: 10px;
+}
+.u-book.-vertical .book-cover {
+  float: none;
+  height: 113px;
+  width: 86px;
+}

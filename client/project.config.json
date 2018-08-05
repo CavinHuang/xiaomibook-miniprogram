@@ -1,0 +1,9 @@
+{
+	"cloudfunctionRoot": "./cloud-functions/",
+	"setting": {
+		"newFeature": true
+	},
+	"appid": "wxf84a60c327db82a4",
+	"projectname": "xiaomibook",
+	"condition": {}
+}

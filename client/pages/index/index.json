@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "v-swiper": "/components/swiper/index",
+    "v-title": "/components/common-title/index",
+    "v-h-title": "/components/common-title/h5title",
+    "book-table": "/components/book-table/index"
+  }
+}
