@@ -1,0 +1,70 @@
+wxs(module="m1")
+  |var setScore = function (number) {
+  |  console.log(number);
+  |  return Math.floor(number)
+  |}
+  |module.exports.setScore = setScore;
+view.new-page.book-page
+  view.main-card
+    view.u-book.-detail
+      view.book-cover.Lazy_loading.Lazy_loaded
+        image(src="{{detail.item.cover}}")
+      view.info
+        text.title {{detail.item.title}}
+        view.author 
+          navigatort.author(url="") {{detail.item.authors}}
+        view.u-grade
+          view.grade(class="{{'grade'+ m1.setScore(detail.item.score)}}")
+          view.read {{detail.item.comment_count}}个评价
+        text.price {{detail.item.price}}书币/千字
+        view.count
+          | 字数：{{Math.ceil(detail.item.word_count / 10000)}}万字
+          text.u-booktag.-serial {{detail.item.finish ? '完结' : '连载中'}}
+  view.main-card(style="margin-top:-10px")
+    view.book-dash
+      view.wrap
+        view.btn-group(style="display:none")
+          view.btn-item
+            navigator.u-btn2(url="")
+              text.book-dash-text
+          view.btn-item
+            navigator.u-btn3(url="") 下载
+        view.btn-group
+          view.btn-item
+            navigator.u-btn2(url="")
+              text.book-dash-text
+          view.btn-item
+            navigator.u-btn3(url="") 下载
+        view.btn-group(style="display:none")
+          view.btn-item
+            navigator.u-btn2(url="") 
+              | 开始阅读
+              text.tip-10086 （来自和阅读）
+      view.wrap2(style="display:none")
+        view.m-limitinfo
+          view.icn-clock
+          text 限时畅读即将结束
+    view.u-folder
+      text.folder-cnt.-fold {{detail.item.content}}
+      view.folder-tail(style="padding: 10px 14px;")
+        text.folder-tail-btn 最新：{{detail.item.latest}} 更新于八小时前
+
+  view.main-card
+    view.u-folder 
+      view.folder-top
+        text 类别标签
+      view.folder-cnt
+        view.m-tag.-color
+          text.u-tag(wx:for="{{detail.item.tags}}", wx:key='unique') {{item}}
+  
+  view.main-card.-folder
+    text.u-title 作者其它图书
+    view.cnt
+      book-table(listData="{{detail.author_books}}")
+
+  view.main-card.-folder
+    text.u-title 图书信息
+    view.cnt
+      view.text
+        text 版权：{{detail.item.rights}}
+

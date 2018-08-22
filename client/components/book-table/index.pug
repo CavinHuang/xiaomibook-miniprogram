@@ -1,9 +1,10 @@
 view.book-table
   block(wx:for="{{listData}}", wx:key='unique')
     view.book-table-item
-      view.u-book.-vertical
-        view.book-cover.Lazy_loading.Lazy_loaded
-          image.img(src="{{item.data ? item.data.book_cover : item.cover}}")
-          text.u-tagRT(class="{{tagClass}}")
-        view.info
-          text.title {{item.ad_name ? item.ad_name : item.title}}
+      navigator(url="{{'/pages/detail/index?id='+item.fiction_id}}")
+        view.u-book.-vertical
+          view.book-cover.Lazy_loading.Lazy_loaded
+            image.img(src="{{item.data ? item.data.book_cover : item.cover}}")
+            text.u-tagRT(class="{{tagClass}}")
+          view.info
+            text.title {{item.ad_name ? item.ad_name : item.title}}

@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "book-table": "/components/book-table/index"
+  }
+}

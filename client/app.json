@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/booklists/free",
-    "pages/booklists/index"
+    "pages/booklists/index",
+    "pages/detail/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

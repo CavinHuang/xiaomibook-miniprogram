@@ -1,0 +1,131 @@
+export default {
+  "comment": {
+    "top_comment": [{
+      "status": 0,
+      "author_nick": "流云",
+      "author": 1000001646074,
+      "author_icon": "http://wx.qlogo.cn/mmopen/vi_32/Wtgh5J65NWRRlndJmRKlxTks7yyDmTKUENV9wo005mAkAW2Mp9cYjibqJL4JmdPguwedTrLTgsJyZPXW2MbFLqw/0",
+      "comment_count": 10,
+      "object_id": 1763465,
+      "content": "每日更新十到十五章，至少能将一个小的情节交待清楚，还是比较不错的。温琼和女儿还没灵魂互换，长此以往，难以想像。\n今天更新的不错。相信接下来的两章能真相大白。然后是争到花家支持，彻底击垮戚家。再然后寻回金钱剑，让温琼和潘云灵魂换回。\n真的很期待每日的更新。但在佃节描写上有点繁琐，本可一句说明的事，便要重复多次。像是写剧本。老铁不会打算成书后排成视剧吧!\n老铁，说好的十更呢？\n故事以情节取胜，甚合中国武侠小说之精髓。但某些细节情节设计不太理想。如张禹取得受撰后为何不勤加练习?无当足球后继怎样?道门五绝从未见张禹认真习练过？虽張禹能力超群，但众多身份却是有些顾此失彼?在某一情节上展开后，导致其他身份长时间停摆，于情理不甚相合？总之以情节取胜，可在情节上又处处被动，令人生疑。建议作者以串插形式或其他方式弥补细节上的缺憾。至于具体铺陈，拭目以待喽!",
+      "rate": 5,
+      "like_count": 26,
+      "create_time": 1504065552,
+      "type": 0,
+      "id": 4741202
+    }],
+    "top_comment_count": 4,
+    "all_comment_count": 4270
+  },
+  "stats": {
+    "paid": 187430
+  },
+  "author_books": [{
+    "ad": 0,
+    "latest_created": 0,
+    "word_count": 1026378,
+    "owner": 0,
+    "allow_discount": 0,
+    "ad_time": 0,
+    "ad_duration": 0,
+    "free_chapter": false,
+    "score_count": 95,
+    "copyright": "",
+    "title": "美女导演的贴身判官",
+    "on_sale": true,
+    "comment_count": 66,
+    "has_ad": 0,
+    "click": 729096,
+    "latest_id": 477,
+    "score": 7.53,
+    "allow_free_read": 1,
+    "rights_id": 10080,
+    "channel": [1],
+    "updated": 1480488119,
+    "finish": true,
+    "tags": ["异术超能", "都市"],
+    "price": 5,
+    "chapter_count": 478,
+    "authors": "铁锁",
+    "categories": [{
+      "category_id": 5000000,
+      "label": "都市"
+    }, {
+      "category_id": 5000300,
+      "label": "异术超能"
+    }],
+    "rights": "阅文集团旗下创世中文网",
+    "level": 0,
+    "cover": "http://cover.read.duokan.com/mfsv2/download/fdsc3/p018fPMgtbmc/mHQukuz61L5OyS.jpg",
+    "summary": "一次街头抽奖，赵宇抽中了二等奖苹果ipad，只是这个标志似乎有点不对劲，为什么是完整的苹果，不是被咬...",
+    "fiction_id": 322205,
+    "outer_id": "5755f9a150e3a412a1a48f98",
+    "latest": "第478章 彩蝶双双久徘徊"
+  }],
+  "item": {
+    "ad": 0,
+    "latest_created": 1534875273,
+    "word_count": 6385876,
+    "owner": 0,
+    "allow_discount": false,
+    "ad_time": 0,
+    "ad_duration": 0,
+    "free_chapter": false,
+    "score_count": 7424,
+    "rights": "阅文集团旗下起点中文网",
+    "copyright": "",
+    "title": "驭房有术",
+    "new_tags": ["轻松", "法师", "感情", "玄学"],
+    "on_sale": true,
+    "comment_count": 4270,
+    "has_ad": 0,
+    "click": 92313375,
+    "content": "进城闯荡的小阿姨衣锦还乡，张禹的老妈心动了，决定让儿子前去投奔。不曾想，所谓的豪宅就是一个三十平米的出租屋，更为要命的是，小阿姨经营的房产中介都快交不上房租了。\r\n风水卖房、风水装修……张禹从乡下棺材铺王老头那里学来的奇门玄术竟然派上了用场，摇身一变成了王牌经纪人……\r\n兄弟、美女，买房吗？阴宅阳宅都有，包装修！\r\n【都市风水秘术！灵异小说中的新题材，非恐怖，适合各种口味！】\r\n本书书友群：149661050（已满），2群：597276660（感谢美女书友墨白提供），V群：291777277（需订阅认证）。",
+    "source": 2,
+    "latest_id": 2695,
+    "score": 8.43,
+    "allow_free_read": 1,
+    "toc": [],
+    "rights_id": 10080,
+    "channel": [1],
+    "updated": 1534875273,
+    "finish": false,
+    "rec_words": "奇门异术、风水玄学，少年身怀超能风水卖房，竟成为王牌经纪人。文学大赛超长篇铜奖，值得一览。",
+    "tags": ["风水秘术", "灵异", "灵异奇谈"],
+    "started": 1480641761,
+    "price": 5,
+    "chapter_count": 2696,
+    "authors": "铁锁",
+    "categories": [{
+      "category_id": 8000000,
+      "label": "灵异"
+    }, {
+      "category_id": 8000400,
+      "label": "灵异奇谈"
+    }],
+    "author_books_total": 2,
+    "level": 0,
+    "created": 1480641761,
+    "cover": "http://cover.read.duokan.com/mfsv2/download/fdsc3/p01I66oHszK2/7CDwQEqR7CFkXT.jpg",
+    "summary": "进城闯荡的小阿姨衣锦还乡，张禹的老妈心动了，决定让儿子前去投奔。不曾想，所谓的豪宅就是一个三十平米的...",
+    "id": 1763465,
+    "source_id": 352876,
+    "fiction_id": 352876,
+    "outer_id": "5691370404281003",
+    "latest": "第2696章 太一生水"
+  },
+  "related_tag_rank": {
+    "rank_index": 1,
+    "rank_title": "灵异悬疑榜",
+    "rank_id": "21003",
+    "rank_ex": 2212118
+  },
+  "ips": [],
+  "result": 0,
+  "related_rank": {
+    "rank_index": 1,
+    "rank_title": "男生畅销榜",
+    "rank_id": "11002",
+    "rank_ex": 507752
+  }
+}
