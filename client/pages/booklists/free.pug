@@ -1,0 +1,15 @@
+view.channel-group.main-card
+  v-title(title="{{pageData.items[0].ad_name}}", subtitle="{{pageData.items[0].ad_copy}}")
+  book-table(listData="{{pageData.items[0].data.data}}", tagClass="-freefiction")
+
+view.channel-group.main-card
+  v-title(title="{{pageData.items[1].ad_name}}", subtitle="{{pageData.items[1].ad_copy}}")
+  view.book-list
+    block(wx:for="{{pageData.items[1].data.data}}", wx:key='unique')
+      book-big-thumb(item="{{item}}", index="{{index}}")
+
+view.channel-group.main-card
+  v-title(title="{{pageData.items[2].ad_name}}", subtitle="{{pageData.items[2].ad_copy}}")
+  view.book-list
+    block(wx:for="{{pageData.items[2].data.data}}", wx:key='unique')
+      book-big-thumb(item="{{item}}", index="{{index}}", showTag="true")

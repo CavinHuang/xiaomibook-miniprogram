@@ -8,6 +8,10 @@
      listData: {
        type: Array,
        value: []
+     },
+     tagClass: {
+       type: String,
+       value: ''
      }
    }
  })

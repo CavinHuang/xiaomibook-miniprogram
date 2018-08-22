@@ -1,0 +1,18 @@
+view.book-big-thumb-item
+  view.u-book
+    view.cnt
+      view.book-cover.Lazy_loading.Lazy_loaded
+        image(src="{{item.data.book_cover}}")
+        view.u-tagRT
+      view.info
+        view.title.single-line {{item.data.title}}
+        view.summary {{item.data.summary}}
+        view.wrap
+          block(wx:for="{{item.data.new_tags}}", wx:key='unique', wx:for-item="it", wx:for-index="idx", wx:if="{{showTag}}")
+            text.book-tag {{it}}
+          view.u-price(wx:if="{{!showTag}}")
+            view.u-strong 
+              text {{item.data.price}}
+              | 元
+          view.author.single-line
+            text.author {{item.data.authors}}

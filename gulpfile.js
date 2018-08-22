@@ -25,6 +25,7 @@ const jdists = require('gulp-jdists')
 const pug = require('gulp-pug')
 const stylus = require('gulp-stylus')
 const watch = require('gulp-watch')
+const batch = require('gulp-batch')
 
 const src = 'client'
 const dist = './dist'
@@ -137,16 +138,31 @@ gulp.task('js', () => {
 })
 
 gulp.task('watch', () => {
+  
+  watch(`${src}/**/*.js`, {
+    ignoreInitial: false
+  }).pipe(gulp.dest(dist))
+  
   ;['wxml', 'pug','wxss', 'styl', 'js', 'json', 'wxs'].forEach((v) => {
-    gulp.watch(`${src}/**/*.${v}`, [v])
+    watch(`${src}/**/*.${v}`, function (evnt) {
+      runSequence(v)
+    })
   })
-  gulp.watch(`${src}/images/**`, ['images'])
-  gulp.watch(`${src}/**/*.scss`, ['wxss'])
-  gulp.watch(`${src}/**/*.styl`, ['styl'])
+
+  watch(`${src}/images/**`, function(evt) {
+    runSequence('images')
+  })
+  watch(`${src}/**/*.scss`, function(){
+    runSequence('wxss')
+  })
+  watch(`${src}/**/*.styl`, function(){
+    runSequence('styl')
+  })
+
 })
 
 gulp.task('clean', () => {
-  return del(['./dist/**'])
+  return del(['dist/**'])
 })
 
 gulp.task('dev', ['clean'], () => {

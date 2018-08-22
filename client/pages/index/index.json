@@ -3,6 +3,8 @@
     "v-swiper": "/components/swiper/index",
     "v-title": "/components/common-title/index",
     "v-h-title": "/components/common-title/h5title",
-    "book-table": "/components/book-table/index"
+    "book-table": "/components/book-table/index",
+    "book-thumb-item": "/components/book-list-item/thumb-item",
+    "book-text-item": "/components/book-list-item/text-item"
   }
 }

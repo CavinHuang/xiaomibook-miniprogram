@@ -1,0 +1,15 @@
+view.list-h5-item
+  view.book-h5
+    view.book-h5__cover.Lazy_loading.Lazy_loaded
+      image.img(src="{{item.cover}}", alt="{{item.title}}")
+      view.u-tagRT
+      view.book-h5__finish {{item.finish ? '完结' : '连载'}}
+      view.book-h5__order {{index + 1}}
+    view.book-h5__info
+      text.book-h5__title {{item.title}}
+      view.book-h5__author
+        text.author {{item.authors}}
+      text.book-h5__summary {{item.summary}}
+      view.book-h5__wrap
+        block(wx:for="{{item.tags}}", wx:for-item="tag", wx:key='unique')
+          text.book-h5__tag {{tag}}

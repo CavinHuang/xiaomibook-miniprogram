@@ -1,0 +1,89 @@
+.book-big-thumb-item
+  cursor pointer
+  position relative
+  overflow hidden
+  border-bottom 1px solid #f0f0f0
+  .u-book
+    padding 13px 14px
+    position relative
+    overflow hidden
+    .book-cover 
+      float left
+      margin-right 10px
+      position relative
+      width 104px
+      height 136.6px
+      background-color #eeece9
+      box-shadow 0px 6px 5px -3px #aaa
+      border 1px solid #f0f0f0
+      border-bottom none
+      overflow hidden
+      &after 
+        content ''
+        position absolute
+        top 0
+        bottom 0
+        left 0
+        right 0
+      image
+        width 100%
+        height 100%
+    .info
+      padding-top 1.2rem
+    .title 
+      margin-bottom 4px
+      font-size 16px
+      font-weight 400
+      color #000
+    .single-line 
+      overflow hidden
+      text-overflow ellipsis
+      white-space nowrap
+    .summary 
+      margin 12px 0 4px
+      font-size 13px
+      line-height 1.6em
+      color #666
+      overflow hidden
+      text-overflow ellipsis
+      height 3.2em
+      display -webkit-box
+      -webkit-line-clamp 2
+      -webkit-box-orient vertical
+    .u-price 
+      float right
+      margin-top -1px
+      line-height 1.3
+      text-align left
+      color #999
+      font-size 12px
+      text
+        font-weight normal
+        color #ff7800
+        font-size 16px
+        margin-right 4px
+    .author
+      color #666
+      margin-top 4px
+      font-size 12px
+      color #8d8d8d
+    .book-tag 
+      float right
+      border 1px solid #ddd
+      margin .2rem -3px 0 0
+      border-radius 3px
+      line-height 1
+      padding 2px
+      -webkit-transform scale(.8)
+      overflow hidden
+      text-overflow ellipsis
+      white-space nowrap
+      max-width 6em
+      font-size 12px
+      color #8d8d8d
+.Lazy_waiting image, .Lazy_loading image
+  opacity 0
+  -webkit-transition opacity .4s
+.Lazy_loaded 
+  image 
+    opacity 1

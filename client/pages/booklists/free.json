@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "header": "/components/common/header",
+    "v-title": "/components/common-title/index",
+    "book-table": "/components/book-table/index",
+    "book-big-thumb": "/components/book-list-item/thumb-big"
+  }
+}

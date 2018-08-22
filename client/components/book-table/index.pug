@@ -4,5 +4,6 @@ view.book-table
       view.u-book.-vertical
         view.book-cover.Lazy_loading.Lazy_loaded
           image.img(src="{{item.data ? item.data.book_cover : item.cover}}")
+          text.u-tagRT(class="{{tagClass}}")
         view.info
           text.title {{item.ad_name ? item.ad_name : item.title}}
